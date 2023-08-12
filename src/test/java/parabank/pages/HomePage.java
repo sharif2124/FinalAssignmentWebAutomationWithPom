@@ -31,4 +31,8 @@ public class HomePage extends BasePage{
         getWebElement(By.linkText("Bill Pay")).click();
         return getInstance(BillPayPage.class);
     }
+    public UpdateContactInfoPage clickUpdateContactInfoPage(){
+        getWebElement(By.linkText("Update Contact Info")).click();
+        return getInstance(UpdateContactInfoPage.class);
+    }
 }
