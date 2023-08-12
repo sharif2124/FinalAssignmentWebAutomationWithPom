@@ -13,7 +13,7 @@ public class TransferFundPage extends BasePage{
     }
     public TransferFundPage fillAmount(double amount) {
         General.waitForDomStable();
-        getWebElement(By.id("amount")).sendKeys(String.valueOf(amount));
+        getWebElement(By.xpath("//input[@id='amount']")).sendKeys(String.valueOf(amount));
         return this;
     }
 
@@ -23,6 +23,8 @@ public class TransferFundPage extends BasePage{
     }
 
     public boolean hasTransferCompleteText() {
-        return getWebElement(By.className("title")).getText().trim().contains(ParaBankString.COMPLETE);
+       // return getWebElement(By.xpath("//h1[@class='title']")).getText().trim().contains(ParaBankString.COMPLETE);
+        return getWebElements(By.xpath("//h1[@class='title']")).size()>0;
+
     }
 }

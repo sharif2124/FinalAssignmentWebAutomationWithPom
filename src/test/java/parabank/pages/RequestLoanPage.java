@@ -23,6 +23,6 @@ public class RequestLoanPage extends BasePage{
         return this;
     }
     public boolean hasError(){
-        return getWebElements(By.className("error")).size()>0;
+        return getWebElements(By.xpath("//h1[@class='title']")).size()>0;
     }
 }

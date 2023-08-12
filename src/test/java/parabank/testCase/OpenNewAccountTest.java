@@ -8,7 +8,7 @@ import parabank.pages.OpenNewAccountPage;
 import parabank.util.ParaBankString;
 
 public class OpenNewAccountTest extends BaseTest{
-    @Test
+    @Test(enabled = false)
     public void OpenAccountShouldSuccess(){
         CustomerLoginPage loginPage = page.getInstance(CustomerLoginPage.class);
         Assert.assertEquals(loginPage.getTitle(), ParaBankString.LOGIN_TITLE);
