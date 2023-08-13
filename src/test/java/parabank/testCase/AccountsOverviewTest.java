@@ -13,8 +13,8 @@ public class AccountsOverviewTest extends BaseTest{
                 .doLogin(getUserName(),getPassword())
                 .clickAccountOverViewPage()
                 .accountTable()
-                .selectMonth(3)
-                .selectType(1)
+                .selectMonth(0)
+                .selectType(0)
                 .ClickButton();
       Assert.assertTrue(accountsOverviewPage.hasTransactionTable());
     }
