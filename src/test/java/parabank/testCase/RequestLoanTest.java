@@ -11,8 +11,8 @@ public class RequestLoanTest extends BaseTest{
         RequestLoanPage requestLoanPage = page.getInstance(CustomerLoginPage.class)
                 .doLogin(getUserName(),getPassword())
                 .clickRequestLoanPage()
-                .LoanAmount()
-                .DownPayment()
+                .LoanAmount(30000)
+                .DownPayment(12000)
                 .ClickBtn();
         Assert.assertTrue(requestLoanPage.hasError());
 

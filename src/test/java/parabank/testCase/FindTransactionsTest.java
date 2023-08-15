@@ -11,14 +11,14 @@ public class FindTransactionsTest extends BaseTest{
         FindTransactionsPage findTransactionsPage = page.getInstance(CustomerLoginPage.class)
                 .doLogin(getUserName(),getPassword())
                 .clickFindTransactionsPage()
-                .FindByTransactionID()
+                .FindByTransactionID(3455566)
                 .FindByTransactionBtn()
-                .FindByDate()
+                .FindByDate(12-12-2022)
                 .FindByDateBtn()
-                .FindByDateRangeBetween()
-                .FindByDateRangeAnd()
+                .FindByDateRangeBetween(12-12-2022)
+                .FindByDateRangeAnd(12-20-2022)
                 .FindByDateRangeBtn()
-                .FindByAmount()
+                .FindByAmount(30000)
                 .FindByAmountBtn();
 
         Assert.assertTrue(findTransactionsPage.hasTransactionSuccess());
