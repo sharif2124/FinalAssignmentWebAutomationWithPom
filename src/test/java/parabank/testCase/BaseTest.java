@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import parabank.pages.BasePage;
 import parabank.pages.Page;
@@ -45,7 +46,7 @@ public class BaseTest {
         return properties.getProperty("password");
     }
 
-@BeforeMethod
+@BeforeClass
     public void setUpBrowser(){
     //Dynamic Browser Setup
        String browserName = properties.getProperty("browserName");
@@ -75,9 +76,15 @@ public class BaseTest {
     driver.get("https://parabank.parasoft.com/parabank/index.htm");
         driver.manage().window().maximize();
         page=new BasePage(driver);
+
+
     }
     @AfterMethod
     public void dearTown(){
         driver.quit();
+    }
+
+    public WebDriver getWebDriver() {
+        return driver;
     }
 }
