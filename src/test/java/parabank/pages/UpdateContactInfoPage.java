@@ -8,33 +8,33 @@ public class UpdateContactInfoPage extends BasePage{
     public UpdateContactInfoPage(WebDriver driver) {
         super(driver);
     }
-    public UpdateContactInfoPage fillFirstName(){
+    public UpdateContactInfoPage fillFirstName(String firstname){
         General.waitForDomStable();
-        getWebElement(By.xpath("//input[@id='customer.firstName']")).sendKeys("John");
+        getWebElement(By.xpath("//input[@id='customer.firstName']")).sendKeys(firstname);
         return this;
     }
-    public UpdateContactInfoPage fillLastName(){
-        getWebElement(By.xpath("//input[@id='customer.lastName']")).sendKeys("Smith");
+    public UpdateContactInfoPage fillLastName(String lastname){
+        getWebElement(By.xpath("//input[@id='customer.lastName']")).sendKeys(lastname);
         return this;
     }
-    public UpdateContactInfoPage fillAddress(){
-        getWebElement(By.xpath("//input[@id='customer.address.street']")).sendKeys("1431 Main St");
+    public UpdateContactInfoPage fillAddress(String address){
+        getWebElement(By.xpath("//input[@id='customer.address.street']")).sendKeys(address);
         return this;
     }
-    public UpdateContactInfoPage fillCity(){
-        getWebElement(By.xpath("//input[@id='customer.address.city']")).sendKeys("Beverly Hills");
+    public UpdateContactInfoPage fillCity(String city){
+        getWebElement(By.xpath("//input[@id='customer.address.city']")).sendKeys(city);
         return this;
     }
-    public UpdateContactInfoPage fillState(){
-        getWebElement(By.xpath("//input[@id='customer.address.state']")).sendKeys("CA");
+    public UpdateContactInfoPage fillState(String state){
+        getWebElement(By.xpath("//input[@id='customer.address.state']")).sendKeys(state);
         return this;
     }
-    public UpdateContactInfoPage fillZipCode(){
-        getWebElement(By.xpath("//input[@id='customer.address.zipCode']")).sendKeys("90210");
+    public UpdateContactInfoPage fillZipCode(int zipcode){
+        getWebElement(By.xpath("//input[@id='customer.address.zipCode']")).sendKeys(String.valueOf(zipcode));
         return this;
     }
-    public UpdateContactInfoPage fillPhone(){
-        getWebElement(By.xpath("//input[@id='customer.phoneNumber']")).sendKeys("310-447-4121");
+    public UpdateContactInfoPage fillPhone(int phone){
+        getWebElement(By.xpath("//input[@id='customer.phoneNumber']")).sendKeys(String.valueOf(phone));
         return this;
     }
     public UpdateContactInfoPage updateClickButton(){

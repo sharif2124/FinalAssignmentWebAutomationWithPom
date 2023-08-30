@@ -10,42 +10,42 @@ public class BillPayPage extends BasePage{
     public BillPayPage(WebDriver driver) {
         super(driver);
     }
-    public BillPayPage fillPayeeName(){
+    public BillPayPage fillPayeeName(String payName){
         General.waitForDomStable();
-        getWebElement(By.xpath("//input[@name='payee.name']")).sendKeys("Sharif");
+        getWebElement(By.xpath("//input[@name='payee.name']")).sendKeys(payName);
         return this;
 
     }
-    public BillPayPage fillAddress(){
-        getWebElement(By.xpath("//input[@name='payee.address.street']")).sendKeys("SQLA");
+    public BillPayPage fillAddress(String address){
+        getWebElement(By.xpath("//input[@name='payee.address.street']")).sendKeys(address);
         return this;
     }
-    public BillPayPage fillCity(){
-        getWebElement(By.xpath("//input[@name='payee.address.city']")).sendKeys("SQLA");
+    public BillPayPage fillCity(String city){
+        getWebElement(By.xpath("//input[@name='payee.address.city']")).sendKeys(city);
         return this;
     }
-    public BillPayPage fillState(){
-        getWebElement(By.xpath("//input[@name='payee.address.state']")).sendKeys("CO");
+    public BillPayPage fillState(String state){
+        getWebElement(By.xpath("//input[@name='payee.address.state']")).sendKeys(state);
         return this;
     }
-    public BillPayPage fillZipCode(){
-        getWebElement(By.xpath("//input[@name='payee.address.zipCode']")).sendKeys("1205");
+    public BillPayPage fillZipCode(int zipcode){
+        getWebElement(By.xpath("//input[@name='payee.address.zipCode']")).sendKeys(String.valueOf(zipcode));
         return this;
     }
-    public BillPayPage fillPhone(){
-        getWebElement(By.xpath("//input[@name='payee.phoneNumber']")).sendKeys("07788993344");
+    public BillPayPage fillPhone(int phoneNumber){
+        getWebElement(By.xpath("//input[@name='payee.phoneNumber']")).sendKeys(String.valueOf(phoneNumber));
         return this;
     }
-    public BillPayPage fillAccount(){
-        getWebElement(By.xpath("//input[@name='payee.accountNumber']")).sendKeys("2345677");
+    public BillPayPage fillAccount(int accountNumber){
+        getWebElement(By.xpath("//input[@name='payee.accountNumber']")).sendKeys(String.valueOf(accountNumber));
         return this;
     }
-    public BillPayPage fillVerifyAccount(){
-        getWebElement(By.xpath("//input[@name='verifyAccount']")).sendKeys("2345677");
+    public BillPayPage fillVerifyAccount(int verifyAccount){
+        getWebElement(By.xpath("//input[@name='verifyAccount']")).sendKeys(String.valueOf(verifyAccount));
         return this;
     }
-    public BillPayPage fillAmount(){
-        getWebElement(By.xpath("//input[@name='amount']")).sendKeys("12000");
+    public BillPayPage fillAmount(int amount){
+        getWebElement(By.xpath("//input[@name='amount']")).sendKeys(String.valueOf(amount));
         return this;
     }
     public BillPayPage sendPaymentButton(){
