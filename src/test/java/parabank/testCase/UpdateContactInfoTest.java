@@ -11,14 +11,14 @@ public class UpdateContactInfoTest extends BaseTest{
         UpdateContactInfoPage updateContactInfoPage = page.getInstance(CustomerLoginPage.class)
                 .doLogin(getUserName(),getPassword())
                 .clickUpdateContactInfoPage()
-                .FirstName()
-                .LastName()
-                .Address()
-                .City()
-                .State()
-                .ZipCode()
-                .Phone()
-                .UpdateClickButton();
+                .fillFirstName()
+                .fillLastName()
+                .fillAddress()
+                .fillCity()
+                .fillState()
+                .fillZipCode()
+                .fillPhone()
+                .updateClickButton();
         Assert.assertTrue(updateContactInfoPage.hasUpdateSuccess());
     }
 }

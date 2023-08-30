@@ -15,7 +15,7 @@ public class AccountsOverviewTest extends BaseTest{
                 .accountTable()
                 .selectMonth(0)
                 .selectType(0)
-                .ClickButton();
+                .clickButton();
       Assert.assertTrue(accountsOverviewPage.hasTransactionTable());
     }
 }

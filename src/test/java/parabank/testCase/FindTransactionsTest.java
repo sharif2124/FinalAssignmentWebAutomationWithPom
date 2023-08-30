@@ -11,15 +11,15 @@ public class FindTransactionsTest extends BaseTest{
         FindTransactionsPage findTransactionsPage = page.getInstance(CustomerLoginPage.class)
                 .doLogin(getUserName(),getPassword())
                 .clickFindTransactionsPage()
-                .FindByTransactionID(3455566)
-                .FindByTransactionBtn()
-                .FindByDate(12-12-2022)
-                .FindByDateBtn()
-                .FindByDateRangeBetween(12-12-2022)
-                .FindByDateRangeAnd(12-20-2022)
-                .FindByDateRangeBtn()
-                .FindByAmount(30000)
-                .FindByAmountBtn();
+                .findByTransactionID(3455566)
+                .clickFindByTransactionBtn()
+                .findByDate(12-12-2022)
+                .clickFindByDateBtn()
+                .findByDateRangeBetween(12-12-2022)
+                .findByDateRangeAnd(12-20-2022)
+                .clickFindByDateRangeBtn()
+                .findByAmount(30000)
+                .clickFindByAmountBtn();
 
         Assert.assertTrue(findTransactionsPage.hasTransactionSuccess());
     }

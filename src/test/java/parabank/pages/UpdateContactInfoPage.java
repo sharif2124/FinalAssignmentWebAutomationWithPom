@@ -8,36 +8,36 @@ public class UpdateContactInfoPage extends BasePage{
     public UpdateContactInfoPage(WebDriver driver) {
         super(driver);
     }
-    public UpdateContactInfoPage FirstName(){
+    public UpdateContactInfoPage fillFirstName(){
         General.waitForDomStable();
         getWebElement(By.xpath("//input[@id='customer.firstName']")).sendKeys("John");
         return this;
     }
-    public UpdateContactInfoPage LastName(){
+    public UpdateContactInfoPage fillLastName(){
         getWebElement(By.xpath("//input[@id='customer.lastName']")).sendKeys("Smith");
         return this;
     }
-    public UpdateContactInfoPage Address(){
+    public UpdateContactInfoPage fillAddress(){
         getWebElement(By.xpath("//input[@id='customer.address.street']")).sendKeys("1431 Main St");
         return this;
     }
-    public UpdateContactInfoPage City(){
+    public UpdateContactInfoPage fillCity(){
         getWebElement(By.xpath("//input[@id='customer.address.city']")).sendKeys("Beverly Hills");
         return this;
     }
-    public UpdateContactInfoPage State(){
+    public UpdateContactInfoPage fillState(){
         getWebElement(By.xpath("//input[@id='customer.address.state']")).sendKeys("CA");
         return this;
     }
-    public UpdateContactInfoPage ZipCode(){
+    public UpdateContactInfoPage fillZipCode(){
         getWebElement(By.xpath("//input[@id='customer.address.zipCode']")).sendKeys("90210");
         return this;
     }
-    public UpdateContactInfoPage Phone(){
+    public UpdateContactInfoPage fillPhone(){
         getWebElement(By.xpath("//input[@id='customer.phoneNumber']")).sendKeys("310-447-4121");
         return this;
     }
-    public UpdateContactInfoPage UpdateClickButton(){
+    public UpdateContactInfoPage updateClickButton(){
         getWebElement(By.cssSelector("input.button")).click();
         return this;
     }

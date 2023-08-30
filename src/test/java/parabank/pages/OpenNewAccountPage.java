@@ -12,12 +12,12 @@ public class OpenNewAccountPage extends BasePage{
         super(driver);
     }
 
-    public OpenNewAccountPage SelectAccountType(int Index){
+    public OpenNewAccountPage selectAccountType(int Index){
         General.waitForDomStable();
         new Select(getWebElement(By.id("type"))).selectByIndex(Index);
         return this;
     }
-    public OpenNewAccountPage ClickButton(){
+    public OpenNewAccountPage clickButton(){
         getWebElement(By.cssSelector("input.button")).click();
         return this;
     }

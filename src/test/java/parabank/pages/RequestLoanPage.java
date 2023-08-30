@@ -9,16 +9,16 @@ public class RequestLoanPage extends BasePage{
     public RequestLoanPage(WebDriver driver) {
         super(driver);
     }
-    public RequestLoanPage LoanAmount(int loanAmount){
+    public RequestLoanPage fillLoanAmount(int loanAmount){
         General.waitForDomStable();
         getWebElement(By.id("amount")).sendKeys(String.valueOf(loanAmount));
         return this;
     }
-    public RequestLoanPage DownPayment(int downPayment){
+    public RequestLoanPage fillDownPayment(int downPayment){
         getWebElement(By.id("downPayment")).sendKeys(String.valueOf(downPayment));
         return this;
     }
-    public RequestLoanPage ClickBtn(){
+    public RequestLoanPage clickBtn(){
         getWebElement(By.cssSelector("input.button")).click();
         return this;
     }

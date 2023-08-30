@@ -10,41 +10,41 @@ public class BillPayPage extends BasePage{
     public BillPayPage(WebDriver driver) {
         super(driver);
     }
-    public BillPayPage PayeeName(){
+    public BillPayPage fillPayeeName(){
         General.waitForDomStable();
         getWebElement(By.xpath("//input[@name='payee.name']")).sendKeys("Sharif");
         return this;
 
     }
-    public BillPayPage Address(){
+    public BillPayPage fillAddress(){
         getWebElement(By.xpath("//input[@name='payee.address.street']")).sendKeys("SQLA");
         return this;
     }
-    public BillPayPage City(){
+    public BillPayPage fillCity(){
         getWebElement(By.xpath("//input[@name='payee.address.city']")).sendKeys("SQLA");
         return this;
     }
-    public BillPayPage State(){
+    public BillPayPage fillState(){
         getWebElement(By.xpath("//input[@name='payee.address.state']")).sendKeys("CO");
         return this;
     }
-    public BillPayPage ZipCode(){
+    public BillPayPage fillZipCode(){
         getWebElement(By.xpath("//input[@name='payee.address.zipCode']")).sendKeys("1205");
         return this;
     }
-    public BillPayPage Phone(){
+    public BillPayPage fillPhone(){
         getWebElement(By.xpath("//input[@name='payee.phoneNumber']")).sendKeys("07788993344");
         return this;
     }
-    public BillPayPage Account(){
+    public BillPayPage fillAccount(){
         getWebElement(By.xpath("//input[@name='payee.accountNumber']")).sendKeys("2345677");
         return this;
     }
-    public BillPayPage VerifyAccount(){
+    public BillPayPage fillVerifyAccount(){
         getWebElement(By.xpath("//input[@name='verifyAccount']")).sendKeys("2345677");
         return this;
     }
-    public BillPayPage Amount(){
+    public BillPayPage fillAmount(){
         getWebElement(By.xpath("//input[@name='amount']")).sendKeys("12000");
         return this;
     }

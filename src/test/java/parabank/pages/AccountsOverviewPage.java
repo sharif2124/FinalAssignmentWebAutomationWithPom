@@ -23,7 +23,7 @@ public class AccountsOverviewPage extends BasePage{
         new Select(getWebElement(By.xpath("//select[@id='transactionType']"))).selectByIndex(Index);
         return this;
     }
-    public AccountsOverviewPage ClickButton(){
+    public AccountsOverviewPage clickButton(){
         getWebElement(By.cssSelector("input.button")).click();
         return this;
     }

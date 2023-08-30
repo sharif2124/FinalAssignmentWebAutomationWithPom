@@ -15,8 +15,8 @@ public class OpenNewAccountTest extends BaseTest{
        HomePage homePage = loginPage.doLogin(getUserName(),getPassword());
        Assert.assertTrue(homePage.hasLogoutlink());
        OpenNewAccountPage openNewAccountPage =homePage.ClickOpenNewAccountLink()
-               .SelectAccountType(1)
-               .ClickButton();
+               .selectAccountType(1)
+               .clickButton();
         Assert.assertTrue(openNewAccountPage.hasAccountId());
 
     }
@@ -26,8 +26,8 @@ public class OpenNewAccountTest extends BaseTest{
         OpenNewAccountPage openNewAccountPage =page.getInstance(CustomerLoginPage.class)
                         .doLogin(getUserName(),getPassword())
                     .ClickOpenNewAccountLink()
-                .SelectAccountType(1)
-                .ClickButton();
+                .selectAccountType(1)
+                .clickButton();
         Assert.assertTrue(openNewAccountPage.hasAccountId());
 
     }
