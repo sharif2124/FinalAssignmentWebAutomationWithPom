@@ -13,10 +13,10 @@ public class FindTransactionsTest extends BaseTest{
                 .clickFindTransactionsPage()
                 .findByTransactionID(3455566)
                 .clickFindByTransactionBtn()
-                .findByDate(12-12-2022)
+                .findByDate("12-12-2022")
                 .clickFindByDateBtn()
-                .findByDateRangeBetween(12-12-2022)
-                .findByDateRangeAnd(12-20-2022)
+                .findByDateRangeBetween("12-12-2022")
+                .findByDateRangeAnd("12-20-2022")
                 .clickFindByDateRangeBtn()
                 .findByAmount(30000)
                 .clickFindByAmountBtn();

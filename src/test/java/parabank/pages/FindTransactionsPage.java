@@ -17,8 +17,8 @@ public class FindTransactionsPage extends BasePage{
         getWebElement(By.xpath("//button[@type='submit']")).click();
         return this;
     }
-    public FindTransactionsPage findByDate(int findByDate){
-    getWebElement(By.xpath("//input[@id='criteria.onDate']")).sendKeys(String.valueOf(findByDate));
+    public FindTransactionsPage findByDate(String findByDate){
+    getWebElement(By.xpath("//input[@id='criteria.onDate']")).sendKeys(findByDate);
     return this;
     }
     public FindTransactionsPage clickFindByDateBtn(){
@@ -26,12 +26,12 @@ public class FindTransactionsPage extends BasePage{
         return this;
     }
 
-    public FindTransactionsPage findByDateRangeBetween(int dateRangeBetween){
-        getWebElement(By.xpath("//input[@id='criteria.fromDate']")).sendKeys(String.valueOf(dateRangeBetween));
+    public FindTransactionsPage findByDateRangeBetween(String dateRangeBetween){
+        getWebElement(By.xpath("//input[@id='criteria.fromDate']")).sendKeys(dateRangeBetween);
         return this;
     }
-    public FindTransactionsPage findByDateRangeAnd(int dateRangeAnd){
-        getWebElement(By.xpath("//input[@id='criteria.toDate']")).sendKeys(String.valueOf(dateRangeAnd));
+    public FindTransactionsPage findByDateRangeAnd(String dateRangeAnd){
+        getWebElement(By.xpath("//input[@id='criteria.toDate']")).sendKeys(dateRangeAnd);
         return this;
     }
     public FindTransactionsPage clickFindByDateRangeBtn(){
