@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="G:/Web Automation Course 12-6-23/Final Assignment Web Automation With Pom/FinalAssignmentWebAutomationWithPom">
+        <classes>
+            <class name="parabank.testCase.AccountsOverviewTest">
+                <methods>
+                    <include name="AccountsOverViewShouldSuccess"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.BillPayTest">
+                <methods>
+                    <include name="BillPayShouldSuccess"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.CustomerLoginTest">
+                <methods>
+                    <include name="shouldLoginWithoutCredential"/>
+                    <include name="loginShouldFailWithoutPassword"/>
+                    <include name="loginShouldFailWithoutUserName"/>
+                    <include name="VarifyfLoginPageTitle"/>
+                    <include name="loginShouldSuccess"/>
+                    <include name="loginShouldSuccess2"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.FindTransactionsTest">
+                <methods>
+                    <include name="FindTransactionsShouldSuccess"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.OpenNewAccountTest">
+                <methods>
+                    <include name="OpenAccountShouldSuccess"/>
+                    <include name="OpenAccountShouldSuccess2"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.RequestLoanTest">
+                <methods>
+                    <include name="RequestLoanShouldSuccess"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.TransferFundTest">
+                <methods>
+                    <include name="transferFundShouldSucceed"/>
+                </methods>
+            </class>
+            <class name="parabank.testCase.UpdateContactInfoTest">
+                <methods>
+                    <include name="ProfileUpdateSuccess"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
